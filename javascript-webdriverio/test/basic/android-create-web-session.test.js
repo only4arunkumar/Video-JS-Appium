@@ -4,7 +4,6 @@ const assert = require('chai').assert;
 const expect = require('expect.js');
 describe('Load the player', ()=> {
 
-
   it('should create and destroy Android browser session',  async function(){
    
     const client =  await webdriverio.remote(androidOptions);
@@ -13,12 +12,8 @@ describe('Load the player', ()=> {
     expect(((await client.$("button.vjs-big-play-button")).isDisplayed)).to.be.ok();
     expect(((await client.$("button.vjs-big-play-button")).isEnabled)).to.be.ok();
     expect(((await client.$("button.vjs-big-play-button")).isClickable)).to.be.ok();
-    client.elementClick(client.$("button.vjs-big-play-button"));
+    (await client.elementClick("button.vjs-big-play-button"));
    
-   
-  
-
-   client.deleteSession();
 
 
     
