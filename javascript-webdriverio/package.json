@@ -1,0 +1,22 @@
+{
+  "name": "webdriverio-sample-appium-tests",
+  "version": "1.0.0",
+  "description": "Sample tests using webdriverio",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 1800000 test/basic/android-create-web-session.test.js",
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install"
+  },
+  "author": "Daniel Graham",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@wdio/cli": "^6.12.0",
+    "assert": "^2.0.0",
+    "chai": "^4.1.2",
+    "mocha": "^8.0.1",
+    "webdriverio": "^6.0.5"
+  },
+  "dependencies": {
+    "expect.js": "^0.3.1"
+  }
+}
